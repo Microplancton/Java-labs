@@ -1,12 +1,14 @@
+import java.util.Scanner;
+
 public class Polidrome {
     public static void main(String[] args) {
-        for (int i = 0; i < args.length; i++) {
-            String s = args[i];
-            if (isPolidrome(s)) {
-                System.out.println(s + " is a polidrome");
-            } else {
-                System.out.println(s + " is not a polidrome");
-            }
+        Scanner scanner = new Scanner(System.in); // Создаем объект сканера
+        System.out.print("Введите строку: ");
+        String text = scanner.nextLine(); // Считываем строку с клавиатуры
+        if (isPolidrome(text)) {
+            System.out.println(text + " is a polidrome");
+        } else {
+            System.out.println(text + " is not a polidrome");
         }
     }
     public static String reverseString(String s) {
